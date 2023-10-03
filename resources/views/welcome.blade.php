@@ -33,17 +33,22 @@
 </head>
 
 <body>
-    <div class="">
-        <canvas id="signature" class="signature border border-secondary" width="250" height="100"></canvas>
+    <div class="container my-3">
         <div class="col-md-12">
-            <div class="mx-auto">
+            <div class="text-center mx-auto mb-2">
                 <button class="btn btn-primary" id="save-png">Save as PNG</button>
                 <button class="btn btn-danger" id="clear">Clear</button>
             </div>
-            <div class="mb-3">
-                <label for="url" class="col-sm-2 col-form-label">Image URL</label>
-                <div class="col-sm-10">
-                    <input type="text" readonly class="form-control" readonly disabled id="url" value="https://">
+        </div>
+        <canvas id="signature" class="signature border border-secondary mx-auto" width="250" height="100"></canvas>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="offset-2 col-8">
+                    <div class="form-group text-center">
+                        <label for="url" class="col-form-label">Image URL</label>
+                        <input type="text" readonly class="form-control" readonly disabled id="url"
+                            value="https://">
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,7 +66,6 @@
     </script>
     <script>
         var canvas = document.getElementById('signature');
-
 
         function resizeCanvas() {
             var ratio = Math.max(window.devicePixelRatio || 1, 1);
